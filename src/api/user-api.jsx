@@ -1,5 +1,6 @@
 import { getProfile } from "../uitls/user-helper";
 import axios from "./axios";
+import { userRoles } from "../constanta/user-roles";
 
 const USERS_API_URL = "/users";
 
@@ -7,7 +8,6 @@ const getUsers = async () => {
   const profile = getProfile();
   if (Object.keys(profile).length > 0) {
     const response = await axios.get(`${USERS_API_URL}`, {
-      //   headers: { Authorization: `Bearer ${profile.accessToken}` },
       withCredentials: true,
     });
     return response?.data?.data;
@@ -36,6 +36,7 @@ const registerUserService = async (name, username, password) => {
         username,
         password,
         name,
+        role: userRoles.customer,
       },
       { headers: { "Content-Type": "application/json" }, withCredentials: true }
     );

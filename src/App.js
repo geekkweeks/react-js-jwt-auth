@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import User from "./pages/User/User";
@@ -7,6 +7,7 @@ import Missing from "./components/Missing/Missing";
 import Layout from "./components/Layout/Layout";
 import RequireAuth from "./components/RequireAuth";
 import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* Public Routes */}
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="dashboard" element={<Dashboard />} />
 
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>

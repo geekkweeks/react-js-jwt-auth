@@ -54,44 +54,46 @@ const Login = () => {
   };
 
   return (
-    <section>
-      {/* <p ref={errRef} className={errMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errMessage}</p> */}
-      <div className="wrapper">
-        <h2>Login</h2>
-        {errMessage ?? <p>{errMessage}</p>}
-        <form onSubmit={handleSubmit}>
-          <div className="input-box">
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              autoComplete="off"
-              onChange={(e) => setUsername(e.target.value)}
-              value={username}
-              required
-            />
-          </div>
+    <div className="container-login">
+      <section>
+        {/* <p ref={errRef} className={errMessage ? "errmsg" : "offscreen"} aria-live="assertive">{errMessage}</p> */}
+        <div className="wrapper">
+          <h2>Login</h2>
+          {errMessage ?? <p>{errMessage}</p>}
+          <form onSubmit={handleSubmit}>
+            <div className="input-box">
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                autoComplete="off"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+                required
+              />
+            </div>
 
-          <div className="input-box">
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              required
-            />
-          </div>
-          <div className="input-box button">
-            <input type="submit" value="Login" />
-          </div>
-          <p>
-            Need an Account? &nbsp;
-            <Link to="/register">Sign Up</Link>
-          </p>
-        </form>
-      </div>
-    </section>
+            <div className="input-box">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                required
+              />
+            </div>
+            <div className="input-box button">
+              <input type="submit" value="Login" />
+            </div>
+            <p>
+              Need an Account? &nbsp;
+              <Link to="/register">Sign Up</Link>
+            </p>
+          </form>
+        </div>
+      </section>
+    </div>
   );
 };
 

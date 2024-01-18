@@ -1,3 +1,6 @@
-const userRoles = ["admin", "customer"];
+const userRoles = {
+  admin: 1,
+  customer: 2,
+};
 
 export { userRoles };

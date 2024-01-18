@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 @import "../../MainStyle.scss";
 
+.container-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   background: #4070f4;
+}
+
 .wrapper {
   position: relative;
   max-width: 430px;
