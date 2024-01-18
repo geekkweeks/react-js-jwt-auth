@@ -33,7 +33,6 @@ const Login = () => {
         { username, password },
         {
           headers: { "Content-Type": "application/json" },
-          //   headers: { "Access-Control-Allow-Origin": "*" },
           withCredentials: true,
         }
       );
@@ -87,8 +86,8 @@ const Login = () => {
             <input type="submit" value="Login" />
           </div>
           <p>
-            Need an Account?
-            <a href="#">Sign Up</a>
+            Need an Account? &nbsp;
+            <Link to="/register">Sign Up</Link>
           </p>
         </form>
       </div>

@@ -1,19 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-//   background: #4070f4;
-}
+@import "../../MainStyle.scss";
 
 .wrapper {
   position: relative;
@@ -43,42 +28,47 @@ body {
   background: #4070f4;
 }
 
-.wrapper form {
+form {
   margin-top: 20px;
 }
-
-.wrapper form .input-box {
-  margin: 20px 0;
-  height: 50px;
-}
-
-form .input-box input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding: 0 15px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.input-box.button input {
-  color: #fff;
-  background: #5d80df;
-  letter-spacing: 1px;
-  cursor: pointer;
-  border: none;
-}
-
-.input-box.button input:hover {
-  background: rgb(48, 37, 192);
-}
-
-form .policy {
+.input-container {
   display: flex;
-  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .span-error {
+    color: rgb(136, 72, 72);
+    font-style: italic;
+  }
 }
 
-form .policy h3 {
-  margin-left: 5px;
-  color: rgb(61, 106, 197);
+.input-field-text {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field-text:focus {
+  border: 2px solid dodgerblue;
+}
+
+.icon {
+  padding: 15px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.btn-register {
+  background: dodgerblue;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.btn-register:hover {
+  opacity: 1;
 }
